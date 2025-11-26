@@ -8,7 +8,7 @@ from basic_async_syntax import wait_random
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    async routine called that takes in 2 int.
+    async routine called wait_n that takes in 2 int.
     """
     delays = []
     tasks = []
@@ -16,7 +16,12 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     for _ in range(n):
         tasks.append(asyncio.create_task(wait_random(max_delay)))
 
-    async for task in asyncio.as_completed(tasks):
-        delays.append(await task)
+    for t in tasks:
+        d = await t
+        delays.append(d)
+
+        for i in range(len(delays)-1):
+            if delays[i] > delays[-1]:
+                delays[i], delays[-1] = delays[-1], delays[i]
 
     return delays

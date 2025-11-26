@@ -4,7 +4,7 @@ imports.
 """
 from typing import List
 import asyncio
-from 0-basic_async_syntax import wait_random
+from basic_async_syntax import wait_random
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """

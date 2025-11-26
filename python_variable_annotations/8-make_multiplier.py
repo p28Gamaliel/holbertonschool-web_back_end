@@ -2,7 +2,7 @@
 """
 function make_multiplier that takes a float multiplier as argument.
 """
-import typing
+from typing import Callable
 
 
 def make_multiplier(miltiplier: float) -> Callable[[float], float]:

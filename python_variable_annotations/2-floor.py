@@ -4,8 +4,8 @@ Function floor.
 """
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """
     argument n with data float.
     """
-    return floor
+    return math.floor(n)

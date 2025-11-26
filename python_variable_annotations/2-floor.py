@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+function from return a floor.
+"""
 import math
 
 

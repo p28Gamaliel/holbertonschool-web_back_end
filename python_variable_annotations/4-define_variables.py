@@ -1,4 +1,4 @@
-#!/usr/bin/ven python3
+#!/usr/bin/env python3
 """
 define and annotate variables with the specified values.
 """

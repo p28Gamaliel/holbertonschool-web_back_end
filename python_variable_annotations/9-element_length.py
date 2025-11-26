@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-function's parameters.
+functions parameters.
 """
 import typing
 

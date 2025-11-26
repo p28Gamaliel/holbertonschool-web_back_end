@@ -2,16 +2,11 @@
 """
 function make_multiplier that takes a float multiplier as argument.
 """
-from typing import Callable
+import typing
 
 
-def make_multiplier(miltiplier: float) -> Callable[[float], float]:
+def make_multiplier(multiplier: float) -> typing.Callable[[float], float]:
     """
-    make multiplier.
+    Return a function that multiplies a float by multiplier.
     """
-    def multiplier_func(value: float) -> float:
-        """
-        multiply values.
-        """
-        return value * multiplier
-    return multiplier_func
+    return lambda x: x * multiplier

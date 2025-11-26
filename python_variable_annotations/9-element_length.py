@@ -10,4 +10,7 @@ def element_length(lst: typing.Iterable[typing.Sequence]
     """
     Return a list of tuples where each tuple.
     """
-    return [(i, len(i)) for i in lst]
+    return [
+        (i, len(i))
+        for i in lst
+    ]

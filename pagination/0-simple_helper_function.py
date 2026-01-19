@@ -4,10 +4,10 @@ Simple helper function for pagination
 """
 
 
-def index_range(page, page_size):
+def index_range(page: int, page_size: int) -> tuple:
     """
     Return a tuple with start and end index for pagination
     """
     start = (page - 1) * page_size
-    end = page * page_size
+    end = start * page_size
     return (start, end)

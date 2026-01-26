@@ -12,11 +12,15 @@ const readDatabase = (filePath) => new Promise((resolve, reject) => {
 
     const fields = {};
     for (const student of students) {
-      const [firstname, , , field] = student.split(',');
-      if (!fields[field]) {
-        fields[field] = [];
+      const parts = student.split(',');
+      const firstname = parts[0];
+      const field = parts[3];
+      if (field && firstname) {
+        if (!fields[field]) {
+          fields[field] = [];
+        }
+        fields[field].push(firstname);
       }
-      fields[field].push(firstname);
     }
 
     resolve(fields);

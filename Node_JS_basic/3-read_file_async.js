@@ -8,7 +8,7 @@ function countStudents(path) {
         return;
       }
 
-      const lines = data.split('\n').filter((line) => line.trim() !== '');
+      const lines = data.toString().replace(/\r/g, '').split('\n').filter((line) => line.trim() !== '');
 
       const students = lines.slice(1);
 
